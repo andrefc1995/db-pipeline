@@ -1,0 +1,205 @@
+INFO:root:Inicio da execução ; 2024-08-29 17:26:01.049752
+INFO:root:Inicio da execução ; 2024-08-29 17:30:27.108895
+INFO:root:Inicio da execução ; 2024-08-29 17:30:43.168143
+INFO:root:Inicio da execução ; 2024-08-29 17:39:43.658607
+INFO:root:Inicio da execução ; 2024-08-29 17:40:36.861391
+INFO:root:Inicio da execução ; 2024-08-29 17:46:56.257833
+INFO:root:Inicio da execução ; 2024-08-29 17:47:43.753916
+INFO:root:Inicio da execução ; 2024-08-29 17:48:24.294858
+INFO:root:Inicio da execução ; 2024-08-29 17:48:47.560847
+INFO:root:Inicio da execução ; 2024-08-29 17:48:56.102735
+INFO:root:Inicio da execução ; 2024-08-29 17:49:08.628713
+INFO:root:Inicio da execução ; 2024-08-29 17:52:08.511452
+INFO:root:Inicio da execução ; 2024-08-29 17:52:32.977706
+INFO:root:Inicio da execução ; 2024-08-29 17:53:05.272410
+INFO:root:Inicio da execução ; 2024-08-29 17:55:21.042270
+INFO:root:Inicio da execução ; 2024-08-29 17:57:18.982378
+INFO:root:Inicio da execução ; 2024-08-29 17:58:13.291310
+INFO:root:Inicio da execução ; 2024-08-29 17:59:16.467269
+INFO:root:Inicio da execução ; 2024-08-29 18:02:33.380095
+INFO:root:Inicio da execução ; 2024-08-29 18:03:47.007333
+INFO:root:Saneamento concluído; 2024-08-29 18:04:04.232351
+INFO:root:Data clean process completed.
+INFO:root:data_voo possui nulos dentro do esperado; 2024-08-29 18:04:04.252505
+INFO:root:datetime_partida possui nulos dentro do esperado; 2024-08-29 18:04:04.262827
+INFO:root:datetime_chegada possui nulos dentro do esperado; 2024-08-29 18:04:04.265196
+INFO:root:origem possui nulos dentro do esperado; 2024-08-29 18:04:04.281876
+INFO:root:destino possui nulos dentro do esperado; 2024-08-29 18:04:04.284114
+INFO:root:companhia possui nulos dentro do esperado; 2024-08-29 18:04:04.298555
+INFO:root:id_voo possui nulos dentro do esperado; 2024-08-29 18:04:04.298555
+INFO:root:id_aeronave possui nulos dentro do esperado; 2024-08-29 18:04:04.312999
+INFO:root:tempo_voo possui nulos dentro do esperado; 2024-08-29 18:04:04.315006
+INFO:root:distancia possui nulos dentro do esperado; 2024-08-29 18:04:04.316011
+WARNING:root:Null check failed.
+INFO:root:Inicio da execução ; 2024-08-29 18:10:41.271454
+INFO:root:Saneamento concluído; 2024-08-29 18:10:55.799305
+INFO:root:Data clean process completed.
+INFO:root:data_voo possui nulos dentro do esperado; 2024-08-29 18:10:55.822940
+INFO:root:datetime_partida possui nulos dentro do esperado; 2024-08-29 18:10:55.830459
+INFO:root:datetime_chegada possui nulos dentro do esperado; 2024-08-29 18:10:55.832694
+INFO:root:origem possui nulos dentro do esperado; 2024-08-29 18:10:55.842796
+INFO:root:destino possui nulos dentro do esperado; 2024-08-29 18:10:55.849158
+INFO:root:companhia possui nulos dentro do esperado; 2024-08-29 18:10:55.849158
+INFO:root:id_voo possui nulos dentro do esperado; 2024-08-29 18:10:55.866019
+INFO:root:id_aeronave possui nulos dentro do esperado; 2024-08-29 18:10:55.866915
+INFO:root:tempo_voo possui nulos dentro do esperado; 2024-08-29 18:10:55.866915
+INFO:root:distancia possui nulos dentro do esperado; 2024-08-29 18:10:55.866915
+WARNING:root:Null check failed.
+INFO:root:Inicio da execução ; 2024-08-29 18:12:51.477812
+INFO:root:Saneamento concluído; 2024-08-29 18:13:07.823125
+INFO:root:Data clean process completed.
+INFO:root:data_voo possui nulos dentro do esperado; 2024-08-29 18:13:07.840450
+INFO:root:datetime_partida possui nulos dentro do esperado; 2024-08-29 18:13:07.854547
+INFO:root:datetime_chegada possui nulos dentro do esperado; 2024-08-29 18:13:07.854547
+INFO:root:origem possui nulos dentro do esperado; 2024-08-29 18:13:07.863641
+INFO:root:destino possui nulos dentro do esperado; 2024-08-29 18:13:07.870732
+INFO:root:companhia possui nulos dentro do esperado; 2024-08-29 18:13:07.870732
+INFO:root:id_voo possui nulos dentro do esperado; 2024-08-29 18:13:07.897142
+INFO:root:id_aeronave possui nulos dentro do esperado; 2024-08-29 18:13:07.904233
+INFO:root:tempo_voo possui nulos dentro do esperado; 2024-08-29 18:13:07.905233
+INFO:root:distancia possui nulos dentro do esperado; 2024-08-29 18:13:07.905233
+WARNING:root:Null check failed.
+ERROR:root:Coluna dep_time não encontrada no DataFrame.
+WARNING:root:Keys check failed.
+INFO:root:Inicio da execução ; 2024-08-29 18:14:08.835738
+INFO:root:Saneamento concluído; 2024-08-29 18:14:23.794118
+INFO:root:Data clean process completed.
+INFO:root:data_voo possui nulos dentro do esperado; 2024-08-29 18:14:23.810188
+INFO:root:datetime_partida possui nulos dentro do esperado; 2024-08-29 18:14:23.826881
+INFO:root:datetime_chegada possui nulos dentro do esperado; 2024-08-29 18:14:23.826881
+INFO:root:origem possui nulos dentro do esperado; 2024-08-29 18:14:23.842609
+INFO:root:destino possui nulos dentro do esperado; 2024-08-29 18:14:23.857640
+INFO:root:companhia possui nulos dentro do esperado; 2024-08-29 18:14:23.857640
+INFO:root:id_voo possui nulos dentro do esperado; 2024-08-29 18:14:23.873312
+INFO:root:id_aeronave possui nulos dentro do esperado; 2024-08-29 18:14:23.873312
+INFO:root:tempo_voo possui nulos dentro do esperado; 2024-08-29 18:14:23.873312
+INFO:root:distancia possui nulos dentro do esperado; 2024-08-29 18:14:23.873312
+WARNING:root:Null check failed.
+ERROR:root:Coluna dep_time não encontrada no DataFrame.
+WARNING:root:Keys check failed.
+INFO:root:Inicio da execução ; 2024-08-29 18:28:31.726850
+INFO:root:Saneamento concluído; 2024-08-29 18:28:46.800384
+INFO:root:Data clean process completed.
+INFO:root:data_voo possui nulos dentro do esperado; 2024-08-29 18:28:46.811337
+INFO:root:datetime_partida possui nulos dentro do esperado; 2024-08-29 18:28:46.818009
+INFO:root:datetime_chegada possui nulos dentro do esperado; 2024-08-29 18:28:46.824465
+INFO:root:origem possui nulos dentro do esperado; 2024-08-29 18:28:46.829699
+INFO:root:destino possui nulos dentro do esperado; 2024-08-29 18:28:46.837764
+INFO:root:companhia possui nulos dentro do esperado; 2024-08-29 18:28:46.846012
+INFO:root:id_voo possui nulos dentro do esperado; 2024-08-29 18:28:46.852948
+INFO:root:id_aeronave possui nulos dentro do esperado; 2024-08-29 18:28:46.860624
+INFO:root:tempo_voo possui nulos dentro do esperado; 2024-08-29 18:28:46.861729
+INFO:root:distancia possui nulos dentro do esperado; 2024-08-29 18:28:46.862745
+WARNING:root:Null check failed.
+ERROR:root:Coluna dep_time não encontrada no DataFrame.
+WARNING:root:Keys check failed.
+INFO:root:Conexão com banco estabelecida ; 2024-08-29 18:28:47.252449
+INFO:root:Dados salvos com sucesso; 2024-08-29 18:28:47.339067
+INFO:root:Conexão com banco estabelecida ; 2024-08-29 18:28:47.341330
+INFO:root:Fim da execução ; 2024-08-29 18:28:47.342478
+INFO:root:Inicio da execução ; 2024-08-29 18:30:05.123623
+INFO:root:Saneamento concluído; 2024-08-29 18:30:20.245231
+INFO:root:Data clean process completed.
+INFO:root:data_voo possui nulos dentro do esperado; 2024-08-29 18:30:20.253732
+INFO:root:datetime_partida possui nulos dentro do esperado; 2024-08-29 18:30:20.261170
+INFO:root:datetime_chegada possui nulos dentro do esperado; 2024-08-29 18:30:20.267178
+INFO:root:origem possui nulos dentro do esperado; 2024-08-29 18:30:20.274665
+INFO:root:destino possui nulos dentro do esperado; 2024-08-29 18:30:20.281911
+INFO:root:companhia possui nulos dentro do esperado; 2024-08-29 18:30:20.289130
+INFO:root:id_voo possui nulos dentro do esperado; 2024-08-29 18:30:20.295426
+INFO:root:id_aeronave possui nulos dentro do esperado; 2024-08-29 18:30:20.301930
+INFO:root:tempo_voo possui nulos dentro do esperado; 2024-08-29 18:30:20.303962
+INFO:root:distancia possui nulos dentro do esperado; 2024-08-29 18:30:20.304952
+WARNING:root:Null check failed.
+ERROR:root:Coluna dep_time não encontrada no DataFrame.
+WARNING:root:Keys check failed.
+INFO:root:Inicio da execução ; 2024-08-29 18:33:36.324696
+INFO:root:Saneamento concluído; 2024-08-29 18:33:52.337384
+INFO:root:Data clean process completed.
+INFO:root:data_voo possui nulos dentro do esperado; 2024-08-29 18:33:52.350896
+INFO:root:datetime_partida possui nulos dentro do esperado; 2024-08-29 18:33:52.377049
+INFO:root:datetime_chegada possui nulos dentro do esperado; 2024-08-29 18:33:52.399058
+INFO:root:origem possui nulos dentro do esperado; 2024-08-29 18:33:52.415913
+INFO:root:destino possui nulos dentro do esperado; 2024-08-29 18:33:52.432445
+INFO:root:companhia possui nulos dentro do esperado; 2024-08-29 18:33:52.446907
+INFO:root:id_voo possui nulos dentro do esperado; 2024-08-29 18:33:52.459744
+INFO:root:id_aeronave possui nulos dentro do esperado; 2024-08-29 18:33:52.470743
+INFO:root:tempo_voo possui nulos dentro do esperado; 2024-08-29 18:33:52.472744
+INFO:root:distancia possui nulos dentro do esperado; 2024-08-29 18:33:52.474341
+WARNING:root:Null check failed.
+ERROR:root:Coluna dep_time não encontrada no DataFrame.
+WARNING:root:Keys check failed.
+INFO:root:Conexão com banco estabelecida ; 2024-08-29 18:33:53.124289
+INFO:root:Dados salvos com sucesso; 2024-08-29 18:33:53.162946
+INFO:root:Conexão com banco estabelecida ; 2024-08-29 18:33:53.165958
+INFO:root:Fim da execução ; 2024-08-29 18:33:53.166959
+INFO:root:Inicio da execução ; 2024-08-30 15:27:09.172369
+INFO:root:Saneamento concluído; 2024-08-30 15:27:27.632102
+INFO:root:data_voo possui nulos dentro do esperado; 2024-08-30 15:27:27.632102
+INFO:root:datetime_partida possui nulos dentro do esperado; 2024-08-30 15:27:27.647751
+INFO:root:datetime_chegada possui nulos dentro do esperado; 2024-08-30 15:27:27.647751
+INFO:root:origem possui nulos dentro do esperado; 2024-08-30 15:27:27.664372
+INFO:root:destino possui nulos dentro do esperado; 2024-08-30 15:27:27.665155
+INFO:root:companhia possui nulos dentro do esperado; 2024-08-30 15:27:27.678477
+INFO:root:id_voo possui nulos dentro do esperado; 2024-08-30 15:27:27.685479
+INFO:root:id_aeronave possui nulos dentro do esperado; 2024-08-30 15:27:27.691035
+INFO:root:tempo_voo possui nulos dentro do esperado; 2024-08-30 15:27:27.691035
+INFO:root:distancia possui nulos dentro do esperado; 2024-08-30 15:27:27.691035
+ERROR:root:Chaves faltando: ['dep_time', 'arr_time', 'carrier', 'flight']
+ERROR:root:Erro na validação de chaves, processo encerrado.
+INFO:root:Inicio da execução ; 2024-08-30 15:29:45.457384
+INFO:root:Saneamento concluído; 2024-08-30 15:30:00.951625
+INFO:root:data_voo possui nulos dentro do esperado; 2024-08-30 15:30:00.955663
+INFO:root:datetime_partida possui nulos dentro do esperado; 2024-08-30 15:30:00.966285
+INFO:root:datetime_chegada possui nulos dentro do esperado; 2024-08-30 15:30:00.966285
+INFO:root:origem possui nulos dentro do esperado; 2024-08-30 15:30:00.982005
+INFO:root:destino possui nulos dentro do esperado; 2024-08-30 15:30:00.982005
+INFO:root:companhia possui nulos dentro do esperado; 2024-08-30 15:30:00.998148
+INFO:root:id_voo possui nulos dentro do esperado; 2024-08-30 15:30:00.998148
+INFO:root:id_aeronave possui nulos dentro do esperado; 2024-08-30 15:30:00.998148
+INFO:root:tempo_voo possui nulos dentro do esperado; 2024-08-30 15:30:01.014561
+INFO:root:distancia possui nulos dentro do esperado; 2024-08-30 15:30:01.014561
+ERROR:root:Chaves faltando: ['dep_time', 'arr_time', 'carrier', 'flight']
+ERROR:root:Erro na validação de chaves, processo encerrado.
+INFO:root:Inicio da execução ; 2024-08-30 15:53:43.209886
+INFO:root:Saneamento concluído; 2024-08-30 15:54:00.352130
+INFO:root:data_voo possui nulos dentro do esperado; 2024-08-30 15:54:00.364752
+INFO:root:datetime_partida possui nulos dentro do esperado; 2024-08-30 15:54:00.369135
+INFO:root:datetime_chegada possui nulos dentro do esperado; 2024-08-30 15:54:00.369135
+INFO:root:origem possui nulos dentro do esperado; 2024-08-30 15:54:00.383615
+INFO:root:destino possui nulos dentro do esperado; 2024-08-30 15:54:00.383615
+INFO:root:companhia possui nulos dentro do esperado; 2024-08-30 15:54:00.400331
+INFO:root:id_voo possui nulos dentro do esperado; 2024-08-30 15:54:00.400331
+INFO:root:id_aeronave possui nulos dentro do esperado; 2024-08-30 15:54:00.418928
+INFO:root:tempo_voo possui nulos dentro do esperado; 2024-08-30 15:54:00.418928
+INFO:root:distancia possui nulos dentro do esperado; 2024-08-30 15:54:00.418928
+ERROR:root:Chaves faltando: ['dep_time', 'arr_time', 'carrier', 'flight']
+ERROR:root:Erro na validação de chaves, processo encerrado.
+INFO:root:Inicio da execução ; 2024-08-30 15:56:07.961804
+INFO:root:Saneamento concluído; 2024-08-30 15:56:25.039935
+INFO:root:data_voo possui nulos dentro do esperado; 2024-08-30 15:56:25.039935
+INFO:root:datetime_partida possui nulos dentro do esperado; 2024-08-30 15:56:25.055653
+INFO:root:datetime_chegada possui nulos dentro do esperado; 2024-08-30 15:56:25.071183
+INFO:root:origem possui nulos dentro do esperado; 2024-08-30 15:56:25.071183
+INFO:root:destino possui nulos dentro do esperado; 2024-08-30 15:56:25.086805
+INFO:root:companhia possui nulos dentro do esperado; 2024-08-30 15:56:25.086805
+INFO:root:id_voo possui nulos dentro do esperado; 2024-08-30 15:56:25.102518
+INFO:root:id_aeronave possui nulos dentro do esperado; 2024-08-30 15:56:25.120933
+INFO:root:tempo_voo possui nulos dentro do esperado; 2024-08-30 15:56:25.120933
+INFO:root:distancia possui nulos dentro do esperado; 2024-08-30 15:56:25.120933
+ERROR:root:Chaves faltando: ['dep_time', 'arr_time', 'carrier', 'flight']
+ERROR:root:Erro na validação de chaves, processo encerrado.
+INFO:root:Inicio da execução ; 2024-08-30 17:04:49.072461
+INFO:root:Saneamento concluído; 2024-08-30 17:05:06.306364
+INFO:root:data_voo possui nulos dentro do esperado; 2024-08-30 17:05:06.321454
+INFO:root:datetime_partida possui nulos dentro do esperado; 2024-08-30 17:05:06.322461
+INFO:root:datetime_chegada possui nulos dentro do esperado; 2024-08-30 17:05:06.341091
+INFO:root:origem possui nulos dentro do esperado; 2024-08-30 17:05:06.348093
+INFO:root:destino possui nulos dentro do esperado; 2024-08-30 17:05:06.355701
+INFO:root:companhia possui nulos dentro do esperado; 2024-08-30 17:05:06.355701
+INFO:root:id_voo possui nulos dentro do esperado; 2024-08-30 17:05:06.372227
+INFO:root:id_aeronave possui nulos dentro do esperado; 2024-08-30 17:05:06.385119
+INFO:root:tempo_voo possui nulos dentro do esperado; 2024-08-30 17:05:06.387119
+INFO:root:distancia possui nulos dentro do esperado; 2024-08-30 17:05:06.388761
+ERROR:root:Chaves faltando: ['dep_time', 'arr_time', 'carrier', 'flight']
+ERROR:root:Erro na validação de chaves, processo encerrado.
