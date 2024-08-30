@@ -94,24 +94,30 @@ def null_check(df, null_tolerance):
              logger.info(
                 f"{col} possui nulos dentro do esperado; {datetime.datetime.now()}")
             
-def keys_check(df: pd.DataFrame, expected_keys: list) -> bool:
+def keys_check(df):
     """
-    Função para validar a presença de chaves primárias em um DataFrame.
-
-    Args:
-        df (pd.DataFrame): DataFrame a ser validado.
-        expected_keys (list): Lista de colunas que devem ser usadas como chaves primárias.
-
-    Returns:
-        bool: True se todas as chaves estiverem presentes, False caso contrário.
+    Função para validar chaves únicas no DataFrame.
+    INPUT: Pandas DataFrame
+    OUTPUT: Boolean
     """
-    missing_keys = [key for key in expected_keys if key not in df.columns]
-    if missing_keys:
-        logger.error(f"Chaves faltando: {missing_keys}")
-        return False
-    logger.info("Todas as chaves estão presentes.")
-    return True
-
+    logging.info("Iniciando a validação das chaves únicas.")
+    
+    # Verifica se as colunas necessárias estão no DataFrame
+    required_columns = ['companhia_formatted', 'datetime_partida_formatted', 'id_voo', 'datetime_chegada_formatted']
+    for col in required_columns:
+        if col not in df.columns:
+            logging.error(f"Coluna {col} não encontrada no DataFrame.")
+            return False
+    
+    # Realiza a validação das chaves únicas
+    validacao = len(df[required_columns].drop_duplicates()) == len(df)
+    
+    if validacao:
+        logging.info("Validação concluída com sucesso. Todas as chaves são únicas.")
+    else:
+        logging.warning("Validação falhou. Existem chaves duplicadas no DataFrame.")
+    
+    return validacao
 
 # Funções auxiliares -------------------------------------------
 

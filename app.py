@@ -5,8 +5,10 @@ from dotenv import load_dotenv
 import assets.utils as utils
 from assets.utils import logger
 import datetime
+import logging
 
 load_dotenv()
+logger = logging.getLogger(__name__)
 
 def data_clean(df, metadados):
     '''
@@ -30,20 +32,30 @@ def data_clean(df, metadados):
     logger.info(f'Saneamento concluído; {datetime.datetime.now()}')
     return df
 
-def feat_eng(df):
-    '''
-    Função para criar novas features no DataFrame.
-    INPUT: DataFrame original.
-    OUTPUT: DataFrame com novas features adicionadas.
-    '''
-    df['tempo_voo_esperado'] = (df['datetime_chegada'] - df['datetime_partida']).dt.total_seconds() / 3600
-    df['tempo_voo_hr'] = df['tempo_voo_esperado'].apply(lambda x: np.floor(x))
-    df['atraso'] = (df['tempo_voo_esperado'] - df['scheduled_time']).apply(lambda x: x if x > 0 else 0)
-    df['flg_status'] = df['atraso'].apply(lambda x: 'atrasado' if x > 0 else 'no_horario')
-    df['dia_semana'] = df['datetime_partida'].dt.day_name()
-    df['horario'] = df['datetime_partida'].dt.hour
+def classifica_hora(hra):
+    if 0 <= hra < 6: return "MADRUGADA"
+    elif 6 <= hra < 12: return "MANHA"
+    elif 12 <= hra < 18: return "TARDE"
+    else: return "NOITE"
 
-    logger.info(f"Engenharia de features concluída; {datetime.datetime.now()}")
+def flg_status(atraso):
+    if atraso > 0.5 : return "ATRASO"
+    else: return "ONTIME"
+
+def feat_eng(df):
+    """
+    Função para criação de novos campos no DataFrame.
+    INPUT: Pandas DataFrame
+    OUTPUT: Pandas DataFrame com novas features
+    """
+    df["tempo_voo_esperado"] = (df["datetime_chegada_formatted"] - df["datetime_partida_formatted"]) / pd.Timedelta(hours=1)
+    df["tempo_voo_hr"] = df["tempo_voo"] /60
+    df["atraso"] = df["tempo_voo_hr"] - df["tempo_voo_esperado"]
+    df["dia_semana"] = df["data_voo"].dt.day_of_week
+    df["horario"] = df.loc[:,"datetime_partida_formatted"].dt.hour.apply(lambda x: classifica_hora(x))
+    df["flg_status"] = df.loc[:,"atraso"].apply(lambda x: flg_status(x))
+    
+    logger.info(f'Engenharia de features concluída; {datetime.datetime.now()}')
     return df
 
 def save_data_sqlite(df):
@@ -63,41 +75,37 @@ def fetch_sqlite_data(table):
     try:
         conn = sqlite3.connect("data/NyflightsDB.db")
         logger.info(f'Conexão com banco estabelecida ; {datetime.datetime.now()}')
-        c = conn.cursor()
-        c.execute(f"SELECT * FROM {table} LIMIT 5")
-        records = c.fetchall()
-        print("Primeiros registros da tabela:")
-        for record in records:
-            print(record)
-        conn.commit()
-    except Exception as e:
-        logger.error(f'Problema na conexão com banco ou ao buscar dados; {datetime.datetime.now()} - Erro: {e}')
-    finally:
-        conn.close()
+    except:
+        logger.error(f'Problema na conexão com banco; {datetime.datetime.now()}')
+    c = conn.cursor()
+    c.execute(f"SELECT * FROM {table} LIMIT 5")
+    print(c.fetchall())
+    conn.commit()
+    conn.close()
+
+# if __name__ == "__main__":
+#     logger.info(f'Inicio da execução ; {datetime.datetime.now()}')
+#     metadados = utils.read_metadado(os.getenv('META_PATH'))
+#     df = pd.read_csv(os.getenv('DATA_PATH'), index_col=0)
+#     df = data_clean(df, metadados)
+#     utils.null_check(df, metadados["null_tolerance"])
+#     if utils.keys_check(df):
+#         df = feat_eng(df)
+#         save_data_sqlite(df)
+#         fetch_sqlite_data(metadados["tabela"][0])
+#     else:
+#         logger.error(f'Validação de chaves falhou; {datetime.datetime.now()}')
+#     logger.info(f'Fim da execução ; {datetime.datetime.now()}')
+
 
 if __name__ == "__main__":
     logger.info(f'Inicio da execução ; {datetime.datetime.now()}')
-    
     metadados  = utils.read_metadado(os.getenv('META_PATH'))
-    df = pd.read_csv(os.getenv('DATA_PATH'), index_col=0)
-    
-    # Limpeza de dados
+    df = pd.read_csv(os.getenv('DATA_PATH'),index_col=0)
     df = data_clean(df, metadados)
-
-    # Validação de nulos e chaves
     utils.null_check(df, metadados["null_tolerance"])
-    keys_valid = utils.keys_check(df, metadados["cols_chaves"])
-    if not keys_valid:
-        logger.error('Erro na validação de chaves, processo encerrado.')
-        exit()
-
-    # Engenharia de features
+    utils.keys_check(df, metadados["cols_chaves"])
     df = feat_eng(df)
-
-    # Salvamento no SQLite
     save_data_sqlite(df)
-    
-    # Exibição dos primeiros registros da tabela
     fetch_sqlite_data(metadados["tabela"][0])
-    
     logger.info(f'Fim da execução ; {datetime.datetime.now()}')
