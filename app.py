@@ -83,21 +83,6 @@ def fetch_sqlite_data(table):
     conn.commit()
     conn.close()
 
-# if __name__ == "__main__":
-#     logger.info(f'Inicio da execução ; {datetime.datetime.now()}')
-#     metadados = utils.read_metadado(os.getenv('META_PATH'))
-#     df = pd.read_csv(os.getenv('DATA_PATH'), index_col=0)
-#     df = data_clean(df, metadados)
-#     utils.null_check(df, metadados["null_tolerance"])
-#     if utils.keys_check(df):
-#         df = feat_eng(df)
-#         save_data_sqlite(df)
-#         fetch_sqlite_data(metadados["tabela"][0])
-#     else:
-#         logger.error(f'Validação de chaves falhou; {datetime.datetime.now()}')
-#     logger.info(f'Fim da execução ; {datetime.datetime.now()}')
-
-
 if __name__ == "__main__":
     logger.info(f'Inicio da execução ; {datetime.datetime.now()}')
     metadados  = utils.read_metadado(os.getenv('META_PATH'))

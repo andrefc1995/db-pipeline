@@ -94,7 +94,7 @@ def null_check(df, null_tolerance):
              logger.info(
                 f"{col} possui nulos dentro do esperado; {datetime.datetime.now()}")
             
-def keys_check(df):
+def keys_check(df, cols_chaves):
     """
     Função para validar chaves únicas no DataFrame.
     INPUT: Pandas DataFrame
@@ -103,14 +103,14 @@ def keys_check(df):
     logging.info("Iniciando a validação das chaves únicas.")
     
     # Verifica se as colunas necessárias estão no DataFrame
-    required_columns = ['companhia_formatted', 'datetime_partida_formatted', 'id_voo', 'datetime_chegada_formatted']
-    for col in required_columns:
+    cols_chaves = ['companhia_formatted', 'datetime_partida_formatted', 'id_voo', 'datetime_chegada_formatted']
+    for col in cols_chaves:
         if col not in df.columns:
             logging.error(f"Coluna {col} não encontrada no DataFrame.")
             return False
     
     # Realiza a validação das chaves únicas
-    validacao = len(df[required_columns].drop_duplicates()) == len(df)
+    validacao = len(df[cols_chaves].drop_duplicates()) == len(df)
     
     if validacao:
         logging.info("Validação concluída com sucesso. Todas as chaves são únicas.")
