@@ -32,16 +32,6 @@ def data_clean(df, metadados):
     logger.info(f'Saneamento concluído; {datetime.datetime.now()}')
     return df
 
-def classifica_hora(hra):
-    if 0 <= hra < 6: return "MADRUGADA"
-    elif 6 <= hra < 12: return "MANHA"
-    elif 12 <= hra < 18: return "TARDE"
-    else: return "NOITE"
-
-def flg_status(atraso):
-    if atraso > 0.5 : return "ATRASO"
-    else: return "ONTIME"
-
 def feat_eng(df):
     """
     Função para criação de novos campos no DataFrame.
@@ -49,14 +39,23 @@ def feat_eng(df):
     OUTPUT: Pandas DataFrame com novas features
     """
     df["tempo_voo_esperado"] = (df["datetime_chegada_formatted"] - df["datetime_partida_formatted"]) / pd.Timedelta(hours=1)
-    df["tempo_voo_hr"] = df["tempo_voo"] /60
+    df["tempo_voo_hr"] = df["tempo_voo"] / 60
     df["atraso"] = df["tempo_voo_hr"] - df["tempo_voo_esperado"]
     df["dia_semana"] = df["data_voo"].dt.day_of_week
-    df["horario"] = df.loc[:,"datetime_partida_formatted"].dt.hour.apply(lambda x: classifica_hora(x))
-    df["flg_status"] = df.loc[:,"atraso"].apply(lambda x: flg_status(x))
+    
+    # Classificação do horário
+    df["horario"] = df.loc[:, "datetime_partida_formatted"].dt.hour.apply(
+        lambda hra: "MADRUGADA" if 0 <= hra < 6 else "MANHA" if 6 <= hra < 12 else "TARDE" if 12 <= hra < 18 else "NOITE"
+    )
+    
+    # Definição do status de atraso
+    df["flg_status"] = df.loc[:, "atraso"].apply(
+        lambda atraso: "ATRASO" if atraso > 0.5 else "ONTIME"
+    )
     
     logger.info(f'Engenharia de features concluída; {datetime.datetime.now()}')
     return df
+
 
 def save_data_sqlite(df):
     try:
