@@ -43,12 +43,10 @@ def feat_eng(df):
     df["atraso"] = df["tempo_voo_hr"] - df["tempo_voo_esperado"]
     df["dia_semana"] = df["data_voo"].dt.day_of_week
     
-    # Classificação do horário
     df["horario"] = df.loc[:, "datetime_partida_formatted"].dt.hour.apply(
         lambda hra: "MADRUGADA" if 0 <= hra < 6 else "MANHA" if 6 <= hra < 12 else "TARDE" if 12 <= hra < 18 else "NOITE"
     )
     
-    # Definição do status de atraso
     df["flg_status"] = df.loc[:, "atraso"].apply(
         lambda atraso: "ATRASO" if atraso > 0.5 else "ONTIME"
     )
